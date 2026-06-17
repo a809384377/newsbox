@@ -159,6 +159,48 @@ rss:
     domain: [ai]
     # ChatGPT release notes（RSSHub /openai/chatgpt/release-notes：cheerio + h1 切段，容器内绕 help.openai.com 403）
 
+  # ───── 国产 AI 厂商 / 中文资讯（6 条 RSSHub 路由 + 2 条直 RSS）─────
+  - id: deepseek_news
+    url: "http://localhost:1200/deepseek/news"
+    tier: official_first_party
+    domain: [ai]
+    # DeepSeek 官方新闻（RSSHub /deepseek/news）
+  - id: qwen_blog
+    url: "https://qwenlm.github.io/blog/index.xml"
+    tier: official_first_party
+    domain: [ai]
+    # 通义千问 Qwen 官方博客（直 RSS）
+  - id: hf_moonshotai
+    url: "http://localhost:1200/huggingface/models/moonshotai"
+    tier: official_first_party
+    domain: [ai]
+    # Kimi / Moonshot AI 的 HuggingFace 模型发布页（RSSHub）
+  - id: hf_zai_org
+    url: "http://localhost:1200/huggingface/models/zai-org"
+    tier: official_first_party
+    domain: [ai]
+    # 智谱 GLM（zai-org）HuggingFace 模型发布页（RSSHub）
+  - id: hf_minimaxai
+    url: "http://localhost:1200/huggingface/models/MiniMaxAI"
+    tier: official_first_party
+    domain: [ai]
+    # MiniMax HuggingFace 模型发布页（RSSHub）
+  - id: hf_bytedance_seed
+    url: "http://localhost:1200/huggingface/models/ByteDance-Seed"
+    tier: official_first_party
+    domain: [ai]
+    # 字节 ByteDance-Seed HuggingFace 模型发布页（RSSHub）
+  - id: aibase_news
+    url: "http://localhost:1200/aibase/news?limit=30"
+    tier: secondary
+    domain: [ai]
+    # AIbase 中文 AI 资讯聚合（RSSHub /aibase/news）
+  - id: qbitai
+    url: "https://www.qbitai.com/feed"
+    tier: secondary
+    domain: [ai]
+    # 量子位 中文 AI 媒体（直 RSS）
+
 # ============================================================
 # web 类（4 条）：trafilatura + Jina 兜底
 # - mode: changelog_page 单页持续追加（按日期标题切段，见设计方案 §3.6）
@@ -301,5 +343,73 @@ twikit:
     domain: [ai]
   - id: x_googlelabs
     url: "googlelabs"
+    tier: official_first_party
+    domain: [ai]
+
+  # ───── 增补 KOL / 研究者 / 创始人（7 条）─────
+  - id: x_rohanpaul_ai
+    url: "rohanpaul_ai"
+    tier: kol
+    domain: [ai]
+  - id: x_gdb
+    url: "gdb"
+    tier: kol
+    domain: [ai]
+  - id: x_emollick
+    url: "emollick"
+    tier: kol
+    domain: [ai]
+  - id: x_gkxspace
+    url: "gkxspace"
+    tier: kol
+    domain: [ai]
+  - id: x_imxiaohu
+    url: "imxiaohu"
+    tier: kol
+    domain: [ai]
+  - id: x_obsdmd
+    url: "obsdmd"
+    tier: kol
+    domain: [ai]
+  - id: x_ayi_ainotes
+    url: "AYi_AInotes"
+    tier: kol
+    domain: [ai]
+
+  # ───── 增补 厂商官号 / 开发者关系（9 条）─────
+  - id: x_openaidevs
+    url: "OpenAIDevs"
+    tier: official_first_party
+    domain: [ai]
+  - id: x_chatgptapp
+    url: "ChatGPTapp"
+    tier: official_first_party
+    domain: [ai]
+  - id: x_claudedevs
+    url: "ClaudeDevs"
+    tier: official_first_party
+    domain: [ai]
+  - id: x_googleai
+    url: "GoogleAI"
+    tier: official_first_party
+    domain: [ai]
+  - id: x_googleaidevs
+    url: "googleaidevs"
+    tier: official_first_party
+    domain: [ai]
+  - id: x_cursor_ai
+    url: "cursor_ai"
+    tier: official_first_party
+    domain: [ai]
+  - id: x_deepseek_ai
+    url: "deepseek_ai"
+    tier: official_first_party
+    domain: [ai]
+  - id: x_kling_ai
+    url: "Kling_ai"
+    tier: official_first_party
+    domain: [ai]
+  - id: x_openrouter
+    url: "OpenRouter"
     tier: official_first_party
     domain: [ai]
